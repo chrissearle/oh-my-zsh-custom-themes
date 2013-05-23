@@ -1,4 +1,3 @@
-oh-my-zsh-custom-themes
-=======================
+## Utility repo
 
-Used as git submodule to pull theme to ~/.oh-my-zsh/custom/themes/
+Exists just to maintain my own oh-my-zsh theme in a way I can link it into ~/oh-my-zsh/custom/themes as a git submodule
