@@ -28,4 +28,14 @@ svn_revision() {
   fi
 }
 
-PROMPT='%2~ $(git_custom_status)$(svn_revision) »%b '
+prompt_char() {
+  git branch >/dev/null 2>/dev/null && echo '±' && return
+  echo 'o'
+}
+
+
+PROMPT='
+%{$fg[green]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}
+%{$fg_bold[yellow]%}$(prompt_char)%{$reset_color%} %2~ $(git_custom_status)$(svn_revision) »%b '
+
+
